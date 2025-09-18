@@ -67,7 +67,7 @@ export const photosData = [
   {
     id: 'photo-9',
     title: '',
-    url: 'https://yasmin-privacy.s3.sa-east-1.amazonaws.com/m18.webp',
+    url: 'https://yasmin-privacy.s3.sa-east-1.amazonaws.com/m4.webp',
     views: '2.1k',
     likes: '310',
     type: 'photo'
