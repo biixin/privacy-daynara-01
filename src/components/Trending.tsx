@@ -96,7 +96,7 @@ const Trending: React.FC<TrendingProps> = ({ onBuyClick, onVideoClick }) => {
               type: 'package',
               title: 'Pacote Completo - 100 Vídeos + 100 Fotos',
               description: 'Acesso completo a todo conteúdo exclusivo',
-              price: 30.00,
+              price: 1.00,
               originalPrice: 50.00,
               discount: 40
             })}

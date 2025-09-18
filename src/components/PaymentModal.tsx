@@ -14,6 +14,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ item, onClose }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isCheckingPayment, setIsCheckingPayment] = useState(false);
   const [paymentMessage, setPaymentMessage] = useState('');
+  const [showRedirectMessage, setShowRedirectMessage] = useState(false);
   
   const copyPixCode = () => {
     if (pixData?.qr_code) {
@@ -46,9 +47,8 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ item, onClose }) => {
     try {
       const response = await checkPaymentStatus(pixData.id);
       
-      if (response.qrcode_status === 'paid') {
-        setPaymentStep('success');
-        setPaymentMessage('Pagamento confirmado com sucesso!');
+      if (response.status === 'paid') {
+        setShowRedirectMessage(true);
       } else {
         setPaymentMessage('Pagamento ainda não foi identificado. Aguarde um momento e tente novamente.');
       }
@@ -59,6 +59,62 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ item, onClose }) => {
       setIsCheckingPayment(false);
     }
   };
+
+  const handleRedirect = () => {
+    let redirectUrl = '';
+    
+    if (item.type === 'live-call') {
+      // Para chamadas, incluir data e hora na mensagem do WhatsApp
+      const message = `Olá, acabei de fazer o pagamento da chamada de vídeo para o dia ${item.date} às ${item.time}. Aguardo o contato!`;
+      const encodedMessage = encodeURIComponent(message);
+      redirectUrl = `https://api.whatsapp.com/send/?phone=5521975023352&text=${encodedMessage}&type=phone_number&app_absent=0`;
+    } else {
+      // Para outros produtos (pacotes), também redirecionar para WhatsApp
+      const message = `Olá, acabei de fazer o pagamento do ${item.title}. Aguardo o acesso ao conteúdo!`;
+      const encodedMessage = encodeURIComponent(message);
+      redirectUrl = `https://api.whatsapp.com/send/?phone=5521975023352&text=${encodedMessage}&type=phone_number&app_absent=0`;
+    }
+    
+    window.open(redirectUrl, '_blank');
+    onClose();
+  };
+
+  if (showRedirectMessage) {
+    return (
+      <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-end justify-center z-50 p-4">
+        <div className="bg-gradient-to-br from-gray-900 to-black rounded-t-3xl w-full max-w-md max-h-[90vh] overflow-y-auto">
+          <div className="p-6 text-center">
+            <h2 className="text-2xl font-bold text-white mb-6">Pagamento Confirmado!</h2>
+            
+            <div className="mb-6">
+              <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Check className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Pagamento Realizado com Sucesso!</h3>
+              <p className="text-gray-300 mb-4">
+                Seu pagamento foi confirmado. Você será redirecionado para receber seu conteúdo.
+              </p>
+              
+              {item.type === 'live-call' && (
+                <div className="bg-blue-500/20 border border-blue-500/30 rounded-xl p-4 mb-4">
+                  <p className="text-blue-400 text-sm font-semibold mb-2">Detalhes da sua chamada:</p>
+                  <p className="text-white">📅 Data: {item.date}</p>
+                  <p className="text-white">🕐 Horário: {item.time}</p>
+                </div>
+              )}
+            </div>
+            
+            <button
+              onClick={handleRedirect}
+              className="w-full py-4 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold rounded-xl transition-all duration-300 shadow-lg"
+            >
+              Ir para WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (paymentStep === 'success') {
     return (

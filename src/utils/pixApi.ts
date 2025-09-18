@@ -52,7 +52,7 @@ export interface PixCreationResponse {
 
 // Interface para resposta da API de verificação de pagamento
 export interface PaymentStatusResponse {
-  qrcode_status: string;
+  status: string;
 }
 
 // Função para criar PIX
