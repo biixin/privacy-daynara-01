@@ -11,7 +11,7 @@ const Trending: React.FC<TrendingProps> = ({ onBuyClick, onVideoClick }) => {
     id: 'featured-video',
     title: 'Prévia Exclusiva',
     videoUrl: 'https://yasmin-botpro.s3.us-east-2.amazonaws.com/0912(1).mp4',
-    thumbnail: 'https://yasmin-privacy.s3.sa-east-1.amazonaws.com/thumb01.png'
+    thumbnail: 'https://yasmin-privacy.s3.sa-east-1.amazonaws.com/thumb020.png'
   };
 
   return (
