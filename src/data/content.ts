@@ -263,5 +263,35 @@ export const videosData = [
     likes: '461',
     type: 'video'
   },
+    {
+    id: 'video-16',
+    title: ' ',
+    thumbnail: 'https://yasmin-privacy.s3.sa-east-1.amazonaws.com/Daynara+Modelo+1/analthumb1.png',
+    videoUrl: 'https://yasmin-privacy.s3.sa-east-1.amazonaws.com/Daynara+Modelo+1/an4l1.mp4',
+    duration: '',
+    views: '3.4K',
+    likes: '461',
+    type: 'video'
+  },
+    {
+    id: 'video-17',
+    title: ' ',
+    thumbnail: 'https://yasmin-privacy.s3.sa-east-1.amazonaws.com/Daynara+Modelo+1/analthumb2.png',
+    videoUrl: 'https://yasmin-privacy.s3.sa-east-1.amazonaws.com/Daynara+Modelo+1/an4l2.mp4',
+    duration: '',
+    views: '3.4K',
+    likes: '461',
+    type: 'video'
+  },
+    {
+    id: 'video-18',
+    title: ' ',
+    thumbnail: 'https://yasmin-privacy.s3.sa-east-1.amazonaws.com/Daynara+Modelo+1/analthumb3.png',
+    videoUrl: 'https://yasmin-privacy.s3.sa-east-1.amazonaws.com/Daynara+Modelo+1/an4l3.mp4',
+    duration: '',
+    views: '3.4K',
+    likes: '461',
+    type: 'video'
+  },
   
 ];
