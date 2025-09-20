@@ -12,18 +12,6 @@ const ContentToggle: React.FC<ContentToggleProps> = ({ activeType, onTypeChange 
       <div className="bg-black/30 backdrop-blur-lg rounded-full p-1 border border-white/20">
         <div className="flex">
           <button
-            onClick={() => onTypeChange('photos')}
-            className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-              activeType === 'photos'
-                ? 'bg-pink-500 text-white shadow-lg'
-                : 'text-gray-300 hover:text-white'
-            }`}
-          >
-            <Camera className="w-5 h-5" />
-            <span>Fotos</span>
-          </button>
-          
-          <button
             onClick={() => onTypeChange('videos')}
             className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
               activeType === 'videos'
@@ -33,6 +21,18 @@ const ContentToggle: React.FC<ContentToggleProps> = ({ activeType, onTypeChange 
           >
             <Video className="w-5 h-5" />
             <span>Vídeos</span>
+          </button>
+          
+          <button
+            onClick={() => onTypeChange('photos')}
+            className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+              activeType === 'photos'
+                ? 'bg-pink-500 text-white shadow-lg'
+                : 'text-gray-300 hover:text-white'
+            }`}
+          >
+            <Camera className="w-5 h-5" />
+            <span>Fotos</span>
           </button>
         </div>
       </div>

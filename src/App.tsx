@@ -57,7 +57,7 @@ function App() {
       case 'live':
         return <LiveCalls onBookCall={openPaymentModal} />;
       default:
-        return <Mural />;
+        return <Mural onImageClick={openImageViewer} />;
     }
   };
 

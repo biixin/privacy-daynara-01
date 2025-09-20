@@ -11,7 +11,7 @@ interface MuralProps {
 }
 
 const Mural: React.FC<MuralProps> = ({ onImageClick }) => {
-  const [contentType, setContentType] = useState<'photos' | 'videos'>('photos');
+  const [contentType, setContentType] = useState<'photos' | 'videos'>('videos');
   const [content, setContent] = useState<any[]>([]);
   const [selectedVideo, setSelectedVideo] = useState<any>(null);
   const [selectedImage, setSelectedImage] = useState<any>(null);
@@ -21,10 +21,10 @@ const Mural: React.FC<MuralProps> = ({ onImageClick }) => {
   }, [contentType]);
 
   const loadContent = () => {
-    if (contentType === 'photos') {
-      setContent(photosData);
-    } else {
+    if (contentType === 'videos') {
       setContent(videosData);
+    } else {
+      setContent(photosData);
     }
   };
 

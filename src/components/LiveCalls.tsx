@@ -1,253 +1,113 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, Video, User } from 'lucide-react';
+import { Video, User, MessageCircle } from 'lucide-react';
 
 interface LiveCallsProps {
   onBookCall: (booking: any) => void;
 }
 
 const LiveCalls: React.FC<LiveCallsProps> = ({ onBookCall }) => {
-  const [selectedDate, setSelectedDate] = useState('');
-  const [selectedTime, setSelectedTime] = useState('');
-  const [showCustomTime, setShowCustomTime] = useState(false);
-  const [customTime, setCustomTime] = useState('');
-  
-  // Função para gerar datas dinâmicas
-  const generateAvailableDates = () => {
-    const dates = [];
-    const today = new Date();
-    
-    for (let i = 0; i < 5; i++) {
-      const date = new Date(today);
-      date.setDate(today.getDate() + i);
-      
-      const year = date.getFullYear();
-      const month = String(date.getMonth() + 1).padStart(2, '0');
-      const day = String(date.getDate()).padStart(2, '0');
-      const dateString = `${year}-${month}-${day}`;
-      
-      let label = '';
-      if (i === 0) {
-        label = 'Hoje';
-      } else if (i === 1) {
-        label = 'Amanhã';
-      } else {
-        const weekdays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
-        const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
-        label = `${weekdays[date.getDay()]}, ${day} ${months[date.getMonth()]}`;
-      }
-      
-      dates.push({ date: dateString, label });
-    }
-    
-    return dates;
-  };
-  
-  const availableDates = generateAvailableDates();
-
-  // Função para gerar horários dinâmicos baseados na hora atual
-  const generateTimeSlots = () => {
-    const slots = [];
-    const now = new Date();
-    const currentHour = now.getHours();
-    const currentMinute = now.getMinutes();
-    
-    // Primeiro slot: AGORA (próxima hora cheia)
-    let nextHour = currentHour;
-    if (currentMinute > 0) {
-      nextHour = (currentHour + 1) % 24;
-    }
-    
-    slots.push({
-      time: `${String(nextHour).padStart(2, '0')}:00`,
-      label: 'AGORA',
-      available: true
-    });
-    
-    // Próximos 7 horários (1 hora de intervalo cada)
-    for (let i = 1; i < 8; i++) {
-      const hour = (nextHour + i) % 24;
-      slots.push({
-        time: `${String(hour).padStart(2, '0')}:00`,
-        label: null,
-        available: true
-      });
-    }
-    
-    return slots;
-  };
-  
-  const timeSlots = generateTimeSlots();
-
-  const handleBooking = () => {
-    const finalTime = showCustomTime ? customTime : selectedTime;
-    if (selectedDate && finalTime) {
-      onBookCall({
-        type: 'live-call',
-        date: selectedDate,
-        time: finalTime,
-        price: 20,
-        title: 'Chamada de Vídeo Exclusiva',
-        description: `Chamada de 10 minutos marcada para ${selectedDate} às ${finalTime}`
-      });
-    }
-  };
-
-  const handleCustomTimeSelect = () => {
-    setShowCustomTime(true);
-    setSelectedTime('');
-  };
-
-  const handleTimeSlotSelect = (time: string) => {
-    setShowCustomTime(false);
-    setCustomTime('');
-    setSelectedTime(time);
-  };
   return (
     <div className="min-h-screen p-4 pt-8">
       <h1 className="text-3xl font-bold text-white mb-2 text-center">
         Chamadinha
       </h1>
       <p className="text-gray-300 text-center mb-8">
-        Agende uma chamada de vídeo exclusiva
+        Chamadas de vídeo ao vivo pelo WhatsApp
       </p>
       
-      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl border border-pink-400/30 p-6 mb-6">
+      {/* Informações sobre as chamadas */}
+      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl border border-pink-400/30 p-6 mb-8">
         <div className="flex items-center space-x-4 mb-4">
-          <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-pink-400">
+          <div className="w-16 h-16 rounded-full overflow-hidden">
             <img 
               src="https://yasmin-privacy.s3.sa-east-1.amazonaws.com/m10.webp" 
-              alt="Profile" 
+              alt="Modelo" 
               className="w-full h-full object-cover"
             />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-white">Chamada Privada</h3>
-            <p className="text-gray-300">10 minutos pra gozar comigo</p>
+            <h3 className="text-xl font-bold text-white">Chamadas ao Vivo</h3>
+            <p className="text-gray-300">Feito via whatsapp sem LINKS!</p>
           </div>
         </div>
         
-        <div className="flex items-center space-x-4 text-sm text-gray-300">
+        <div className="flex items-center space-x-4 text-sm text-gray-300 mb-4">
           <div className="flex items-center space-x-1">
             <Video className="w-4 h-4" />
-            <span>Ao vivo</span>
+            <span>Ao Vivo</span>
           </div>
+          <div className="flex items-center space-x-1">
+            <MessageCircle className="w-4 h-4" />
+            <span>WhatsApp</span>
+          </div>
+        </div>
+        
+        <div className="bg-blue-500/20 border border-blue-500/30 rounded-xl p-4">
+          <p className="text-blue-400 text-sm font-semibold mb-2">Como funciona:</p>
+          <p className="text-white text-sm">
+            Após o pagamento, você será redirecionado para o WhatsApp onde iremos marcar o horário da chamadinha. 
+            A chamada é feita ao vivo por câmera!
+          </p>
         </div>
       </div>
       
-      <div className="space-y-6">
-        <div>
-          <h3 className="text-lg font-bold text-white mb-4 flex items-center space-x-2">
-            <Calendar className="w-5 h-5" />
-            <span>Escolha a Data</span>
-          </h3>
-          
-          <div className="grid grid-cols-2 gap-3">
-            {availableDates.map((dateOption) => (
-              <button
-                key={dateOption.date}
-                onClick={() => setSelectedDate(dateOption.date)}
-                className={`p-4 rounded-xl border transition-all duration-300 ${
-                  selectedDate === dateOption.date
-                    ? 'bg-pink-500/20 border-pink-400 text-pink-400'
-                    : 'bg-black/20 border-white/10 text-white hover:border-pink-400/50'
-                }`}
-              >
-                <div className="font-semibold">{dateOption.label}</div>
-                <div className="text-sm text-gray-400">{dateOption.date}</div>
-              </button>
-            ))}
+      {/* Pacotes de Chamada */}
+      <div className="space-y-4">
+        <h3 className="text-2xl font-bold text-white mb-6 text-center">Pacotes de Chamada</h3>
+        
+        {/* Chamada 10 minutos */}
+        <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-6">
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <h4 className="text-xl font-bold text-white">Chamada 10 min</h4>
+              <p className="text-gray-300 text-sm">Chamada de vídeo ao vivo</p>
+            </div>
+            <div className="text-right">
+              <div className="text-gray-400 line-through text-sm">R$ 39,80</div>
+              <div className="text-white font-bold text-2xl">R$ 19,90</div>
+            </div>
           </div>
+          
+          <button
+            onClick={() => onBookCall({
+              type: 'live-call-10',
+              title: 'Chamada de Vídeo 10 minutos',
+              description: 'Chamada de vídeo ao vivo pelo WhatsApp por 10 minutos',
+              price: 19.90,
+              originalPrice: 39.80
+            })}
+            className="w-full py-4 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold rounded-xl transition-all duration-300 shadow-lg"
+          >
+            Liberar Pacote!
+          </button>
         </div>
         
-        {selectedDate && (
-          <div>
-            <h3 className="text-lg font-bold text-white mb-4 flex items-center space-x-2">
-              <Clock className="w-5 h-5" />
-              <span>Horários Disponíveis</span>
-            </h3>
-            
-            <div className="grid grid-cols-2 gap-3">
-              {timeSlots.map((slot) => (
-                <button
-                  key={slot.time}
-                  onClick={() => slot.available && handleTimeSlotSelect(slot.time)}
-                  disabled={!slot.available}
-                  className={`p-4 rounded-xl border transition-all duration-300 ${
-                    selectedTime === slot.time
-                      ? 'bg-pink-500/20 border-pink-400 text-pink-400'
-                      : 'bg-black/20 border-white/10 text-white hover:border-pink-400/50'
-                  }`}
-                >
-                  <div className="font-semibold">
-                    {slot.label ? slot.label : slot.time}
-                  </div>
-                  {slot.label && (
-                    <div className="text-xs text-gray-400">{slot.time}</div>
-                  )}
-                  <div className="text-sm text-green-400">Disponível</div>
-                </button>
-              ))}
-              
-              {/* Botão Horário Personalizado */}
-              <button
-                onClick={handleCustomTimeSelect}
-                className={`p-4 rounded-xl border transition-all duration-300 col-span-2 ${
-                  showCustomTime
-                    ? 'bg-purple-500/20 border-purple-400 text-purple-400'
-                    : 'bg-black/20 border-white/10 text-white hover:border-purple-400/50'
-                }`}
-              >
-                <div className="font-semibold">Horário Personalizado</div>
-                <div className="text-sm text-purple-400">Escolha seu horário</div>
-              </button>
+        {/* Chamada até gozar */}
+        <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-yellow-400/50 p-6 animate-pulse-soft shadow-lg shadow-yellow-400/20">
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <h4 className="text-xl font-bold text-white">Chamada até Gozar</h4>
+              <p className="text-gray-300 text-sm">Sem limite de tempo</p>
             </div>
-            
-            {/* Input de horário personalizado */}
-            {showCustomTime && (
-              <div className="mt-4">
-                <label className="block text-white font-semibold mb-2">
-                  Digite o horário desejado:
-                </label>
-                <input
-                  type="time"
-                  value={customTime}
-                  onChange={(e) => setCustomTime(e.target.value)}
-                  className="w-full p-3 bg-black/30 border border-white/20 rounded-xl text-white focus:border-purple-400 focus:outline-none"
-                  min="00:00"
-                  max="23:59"
-                />
-              </div>
-            )}
-          </div>
-        )}
-        
-        {selectedDate && (selectedTime || (showCustomTime && customTime)) && (
-          <div className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
-            <h3 className="text-xl font-bold text-white mb-4">Resumo da Reserva</h3>
-            
-            <div className="space-y-3 mb-6">
-              <div className="flex justify-between items-center">
-                <span className="text-gray-300">Data:</span>
-                <span className="text-white font-semibold">{selectedDate}</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-gray-300">Horário:</span>
-                <span className="text-white font-semibold">{showCustomTime ? customTime : selectedTime}</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-gray-300">Duração:</span>
-                <span className="text-white font-semibold">10 minutos</span>
-              </div>
+            <div className="text-right">
+              <div className="text-gray-400 line-through text-sm">R$ 79,80</div>
+              <div className="text-white font-bold text-2xl">R$ 39,90</div>
             </div>
-            
-            <button
-              onClick={handleBooking}
-              className="w-full py-4 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold rounded-xl transition-all duration-300 shadow-lg"
-            >
-              Agendar Chamada
-            </button>
           </div>
-        )}
+          
+          <button
+            onClick={() => onBookCall({
+              type: 'live-call-unlimited',
+              title: 'Chamada de Vídeo até Gozar',
+              description: 'Chamada de vídeo ao vivo pelo WhatsApp sem limite de tempo',
+              price: 39.90,
+              originalPrice: 79.80
+            })}
+            className="w-full py-4 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold rounded-xl transition-all duration-300 shadow-lg"
+          >
+            Liberar Pacote!
+          </button>
+        </div>
       </div>
       
       <div className="h-20" />

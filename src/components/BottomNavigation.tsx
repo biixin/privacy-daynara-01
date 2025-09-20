@@ -10,14 +10,14 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ activeTab, onTabCha
   const tabs = [
     { id: 'mural', label: 'Mural', icon: Home, highlight: false },
     { id: 'trending', label: 'Em Alta', icon: TrendingUp, highlight: true, alwaysHighlight: true },
-    { id: 'live', label: 'Chamadinha', icon: Video, highlight: false },
+    { id: 'live', label: 'Chamadinha', icon: Video, highlight: false, useCustomIcon: true },
   ] as const;
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-black/90 backdrop-blur-lg border-t border-white/10">
       <div className="flex justify-center items-center py-2 px-4">
         <div className="flex justify-between items-center w-full max-w-sm">
-          {tabs.map(({ id, label, icon: Icon, highlight, alwaysHighlight }) => (
+          {tabs.map(({ id, label, icon: Icon, highlight, alwaysHighlight, useCustomIcon }) => (
             <button
               key={id}
               onClick={() => onTabChange(id)}
@@ -34,7 +34,17 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ activeTab, onTabCha
               {alwaysHighlight && (
                 <div className="absolute -top-1 -right-1 w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
               )}
-              <Icon className={`w-6 h-6 mb-1 ${alwaysHighlight ? 'drop-shadow-lg' : ''}`} />
+              {useCustomIcon && id === 'live' ? (
+                <div className="w-6 h-6 mb-1 rounded-full overflow-hidden">
+                  <img 
+                    src="https://yasmin-privacy.s3.sa-east-1.amazonaws.com/m10.webp" 
+                    alt="Modelo" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ) : (
+                <Icon className={`w-6 h-6 mb-1 ${alwaysHighlight ? 'drop-shadow-lg' : ''}`} />
+              )}
               <span className={`text-xs font-medium ${alwaysHighlight ? 'font-bold' : ''}`}>{label}</span>
             </button>
           ))}
