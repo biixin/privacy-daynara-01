@@ -127,8 +127,8 @@ export const videosData = [
   {
     id: 'video-1',
     title: ' ',
-    thumbnail: 'https://yasmin-privacy.s3.sa-east-1.amazonaws.com/thumb26.png',
-    videoUrl: 'https://dl.dropboxusercontent.com/s/3nlfdc2fmpc62tkzvsj1w/1.mp4?rlkey=1okym0mvx1hg9bs3wnowkamsk&st=vx70j3xs&dl=0',
+    thumbnail: 'http://dl.dropboxusercontent.com/s/kq495my3mamrcninomtjf/1-thumbnail.webp?rlkey=qyaqgn973ifl7ux5wuamjfbax&st=5jc8cn1o&dl=0',
+    videoUrl: 'http://dl.dropboxusercontent.com/s/vv1mtn5p7ln88hg30zoou/1.mp4?rlkey=7n42lbq4444g8sqf4jpsptyh1&st=kdptlxg7&dl=0',
     views: '4.2k',
     likes: '520',
     type: 'video'
