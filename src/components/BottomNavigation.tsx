@@ -37,7 +37,7 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ activeTab, onTabCha
               {useCustomIcon && id === 'live' ? (
                 <div className="w-6 h-6 mb-1 rounded-full overflow-hidden">
                   <img 
-                    src="https://yasmin-privacy.s3.sa-east-1.amazonaws.com/m10.webp" 
+                    src="http://dl.dropboxusercontent.com/s/vf8f7vzua875mc6ttf2g2/normal1.jpg?rlkey=gby73l3b3l3805g2m32rrhrsh&st=kcofka7c&dl=0" 
                     alt="Modelo" 
                     className="w-full h-full object-cover"
                   />
