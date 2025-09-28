@@ -20,7 +20,7 @@ const LiveCalls: React.FC<LiveCallsProps> = ({ onBookCall }) => {
         <div className="flex items-center space-x-4 mb-4">
           <div className="w-16 h-16 rounded-full overflow-hidden">
             <img 
-              src="https://yasmin-privacy.s3.sa-east-1.amazonaws.com/m10.webp" 
+              src="http://dl.dropboxusercontent.com/s/vf8f7vzua875mc6ttf2g2/normal1.jpg?rlkey=gby73l3b3l3805g2m32rrhrsh&st=kcofka7c&dl=0" 
               alt="Modelo" 
               className="w-full h-full object-cover"
             />
