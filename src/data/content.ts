@@ -97,7 +97,7 @@ export const videosData = [
     id: 'video-2',
     title: ' ',
     thumbnail: 'http://dl.dropboxusercontent.com/s/pd2lrifyyc7r5ae5tc2ft/2-thumbnail.webp?rlkey=glw9px4n4k3wzvcop23hl1we7&st=31jr2q0k&dl=0',
-    videoUrl: 'http://dl.dropboxusercontent.com/s/pd2lrifyyc7r5ae5tc2ft/2-thumbnail.webp?rlkey=glw9px4n4k3wzvcop23hl1we7&st=31jr2q0k&dl=0',
+    videoUrl: 'http://dl.dropboxusercontent.com/s/l4fr6rx5nw00cuuqk8r8z/2.mp4?rlkey=afkyuw1us1opyfahre89qilg7&st=lid0j41w&dl=0',
     duration: '',
     views: '4.4k',
     likes: '429',
@@ -106,8 +106,8 @@ export const videosData = [
   {
     id: 'video-3',
     title: ' ',
-    thumbnail: 'http://dl.dropboxusercontent.com/s/l4fr6rx5nw00cuuqk8r8z/2.mp4?rlkey=afkyuw1us1opyfahre89qilg7&st=8c8duayo&dl=0',
-    videoUrl: 'http://dl.dropboxusercontent.com/s/lw1dr96phxj1ob8gd0egk/3-thumbnail.webp?rlkey=1abcdypg0w0yh52d3fuvegmkx&st=0jq3nur5&dl=0',
+    thumbnail: 'http://dl.dropboxusercontent.com/s/lw1dr96phxj1ob8gd0egk/3-thumbnail.webp?rlkey=1abcdypg0w0yh52d3fuvegmkx&st=0jq3nur5&dl=0',
+    videoUrl: 'http://dl.dropboxusercontent.com/s/vq62dy3megzfamlsbl4gl/3.mp4?rlkey=mym7akc369sn78qhrryryw872&st=gow5d0te&dl=0',
     duration: '',
     views: '3.5k',
     likes: '254',
@@ -116,7 +116,7 @@ export const videosData = [
   {
     id: 'video-4',
     title: ' ',
-    thumbnail: 'http://dl.dropboxusercontent.com/s/vq62dy3megzfamlsbl4gl/3.mp4?rlkey=mym7akc369sn78qhrryryw872&st=lla10u8r&dl=0',
+    thumbnail: 'http://dl.dropboxusercontent.com/s/u55ijykf683bfkyxa0ysb/4-thumbnail.webp?rlkey=n5i9icajt63mi2kk4u78v03te&st=9snfkjew&dl=0',
     videoUrl: 'http://dl.dropboxusercontent.com/s/jaaw2ey7hp4h238257f8a/4.mp4?rlkey=wg82bv10nxetofa9or69cvvj5&st=e7vtyzbt&dl=0',
     duration: '',
     views: '2.6k',
@@ -126,8 +126,8 @@ export const videosData = [
   {
     id: 'video-5',
     title: ' ',
-    thumbnail: 'http://dl.dropboxusercontent.com/s/jaaw2ey7hp4h238257f8a/4.mp4?rlkey=wg82bv10nxetofa9or69cvvj5&st=e7vtyzbt&dl=0',
-    videoUrl: 'http://dl.dropboxusercontent.com/s/lp12z87za50kfvmjmi5lk/5-thumbnail.webp?rlkey=eidhy9zz8b3btvgaeajbmpxl6&st=0r32ymee&dl=0',
+    thumbnail: 'http://dl.dropboxusercontent.com/s/lp12z87za50kfvmjmi5lk/5-thumbnail.webp?rlkey=eidhy9zz8b3btvgaeajbmpxl6&st=0r32ymee&dl=0',
+    videoUrl: 'http://dl.dropboxusercontent.com/s/m9eeebdeoh4tndr0szva1/5.mp4?rlkey=bol90fhcm9dhnwia0knk1fnzm&st=6ziizymz&dl=0',
     duration: '',
     views: '1.7k',
     likes: '145',
@@ -136,7 +136,7 @@ export const videosData = [
   {
     id: 'video-6',
     title: ' ',
-    thumbnail: 'http://dl.dropboxusercontent.com/s/m9eeebdeoh4tndr0szva1/5.mp4?rlkey=bol90fhcm9dhnwia0knk1fnzm&st=w3k6616e&dl=0',
+    thumbnail: 'http://dl.dropboxusercontent.com/s/chjl09mefwerv2nfd6de5/6-thumbnail.webp?rlkey=0v3clq0lmoczbey1nmxdxmpi6&st=i9fanlkq&dl=0',
     videoUrl: 'http://dl.dropboxusercontent.com/s/sl4ox0j85rdgpvc5f5wwx/6.mp4?rlkey=bwowlrb9w12fo4zke6x3n2lm3&st=k0x3hrao&dl=0',
     duration: '',
     views: '2.8k',
@@ -146,7 +146,7 @@ export const videosData = [
   {
     id: 'video-8',
     title: ' ',
-    thumbnail: 'http://dl.dropboxusercontent.com/s/sl4ox0j85rdgpvc5f5wwx/6.mp4?rlkey=bwowlrb9w12fo4zke6x3n2lm3&st=k0x3hrao&dl=0',
+    thumbnail: 'http://dl.dropboxusercontent.com/s/mgc7m47o3q5busy7ocvpx/7-thumbnail.webp?rlkey=qf1uk9b27vlbwn2xhic6yto2l&st=94uimdo9&dl=0',
     videoUrl: 'http://dl.dropboxusercontent.com/s/78i3mb82stwtxgvhbys27/7.mp4?rlkey=1qnu9i3j51n8487w2de5u5xeq&st=wuz3clor&dl=0',
     duration: '',
     views: '1.3k',
@@ -206,7 +206,7 @@ export const videosData = [
     {
     id: 'video-14',
     title: ' ',
-    thumbnail: 'http://dl.dropboxusercontent.com/s/pqvnfawntclj43z4wy9nj/12.mp4?rlkey=d829edebc6avaoxwvhzgi7yzj&st=c50hoyxf&dl=0',
+    thumbnail: 'http://dl.dropboxusercontent.com/s/62sw8ymvoofoptq7ahn9g/13-thumbnail.webp?rlkey=bi0ft64vb7y830rg8rn29nx10&st=uorsqaqq&dl=0',
     videoUrl: 'http://dl.dropboxusercontent.com/s/sgeqr0kcgnayzei9w6v75/13.mp4?rlkey=ovr2w0uwm76sme72pkcb64ig8&st=jdg6vnjj&dl=0',
     duration: '',
     views: '4.2k',
@@ -216,7 +216,7 @@ export const videosData = [
     {
     id: 'video-15',
     title: ' ',
-    thumbnail: 'http://dl.dropboxusercontent.com/s/sgeqr0kcgnayzei9w6v75/13.mp4?rlkey=ovr2w0uwm76sme72pkcb64ig8&st=jdg6vnjj&dl=0',
+    thumbnail: 'http://dl.dropboxusercontent.com/s/wjdn2jo9w5nmqf6jfls1s/14-thumbnail.webp?rlkey=wz4gykz3xmwwv1ofw3loj01t7&st=0qqpopv8&dl=0',
     videoUrl: 'http://dl.dropboxusercontent.com/s/anvbgdxdeuaqo8u5qakul/14.mp4?rlkey=eoxvoajndrimdf5atd8lwxhlp&st=3z0elcq5&dl=0',
     duration: '',
     views: '3.4K',
