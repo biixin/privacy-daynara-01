@@ -10,8 +10,8 @@ const Trending: React.FC<TrendingProps> = ({ onBuyClick, onVideoClick }) => {
   const featuredVideo = {
     id: 'featured-video',
     title: 'Prévia Exclusiva',
-    videoUrl: 'https://yasmin-privacy.s3.sa-east-1.amazonaws.com/Daynara+Modelo+1/previa.mp4',
-    thumbnail: 'https://yasmin-privacy.s3.sa-east-1.amazonaws.com/Daynara+Modelo+1/thumb-previa.png'
+    videoUrl: 'http://dl.dropboxusercontent.com/s/x9m12btopiqovpopqi50i/previa.mp4?rlkey=2omywlfqr6kqdsovbihiflupv&st=42nw6ux8&dl=0',
+    thumbnail: 'http://dl.dropboxusercontent.com/s/41v4nqqnph7bsw343n567/previa-thumbnail.webp?rlkey=ck78e3hqcnwm8aup1y9glj8zb&st=zmlq4ar3&dl=0'
   };
 
   return (
@@ -59,7 +59,7 @@ const Trending: React.FC<TrendingProps> = ({ onBuyClick, onVideoClick }) => {
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-6">
           <div className="relative aspect-video rounded-xl overflow-hidden mb-4">
             <img
-              src="https://yasmin-privacy.s3.sa-east-1.amazonaws.com/thumb020.png"
+              src="http://dl.dropboxusercontent.com/s/ao5hpahnmdkx4con3zxo7/transando-thumbnail.webp?rlkey=il4i6y57eqkmwgrsgsi597x7h&st=i13waf5r&dl=0"
               alt="Prévia Pacote Transando"
               className="w-full h-full object-cover"
             />
@@ -93,7 +93,7 @@ const Trending: React.FC<TrendingProps> = ({ onBuyClick, onVideoClick }) => {
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-yellow-400/50 p-6 animate-pulse-soft shadow-lg shadow-yellow-400/20">
           <div className="relative aspect-video rounded-xl overflow-hidden mb-4">
             <img
-              src="https://yasmin-privacy.s3.sa-east-1.amazonaws.com/Daynara+Modelo+1/analthumb1.png"
+              src="http://dl.dropboxusercontent.com/s/cajgewtks2q6wdrhaga63/anal-thumbnail.webp?rlkey=9vzh0ecm1zwcc0ma1je3qdf3c&st=zfyob0ai&dl=0"
               alt="Prévia Pacote Anal"
               className="w-full h-full object-cover"
             />
