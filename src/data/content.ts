@@ -3,7 +3,7 @@ export const photosData = [
   {
     id: 'photo-1',
     title: '',
-    url: 'https://yasmin-privacy.s3.sa-east-1.amazonaws.com/m10.webp',
+    url: 'https://dl.dropboxusercontent.com/s/3nlfdc2fmpc62tkzvsj1w/1.mp4?rlkey=1okym0mvx1hg9bs3wnowkamsk&st=vx70j3xs&dl=0',
     views: '2.5k',
     likes: '340',
     type: 'photo'
