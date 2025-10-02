@@ -19,9 +19,9 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ item, onClose }) => {
   // Vídeo de demonstração baseado no tipo do item
   const getPreviewVideo = () => {
     if (item.type === 'package') {
-      return 'https://yasmin-botpro.s3.us-east-2.amazonaws.com/0912(1).mp4';
+      return 'https://media-wordpress.kjufc9.easypanel.host/wp-content/uploads/2025/10/Y01-Transando.mp4';
     } else if (item.type === 'solo-package') {
-      return 'https://yasmin-privacy.s3.sa-east-1.amazonaws.com/Daynara+Modelo+1/an4l1.mp4';
+      return 'https://media-wordpress.kjufc9.easypanel.host/wp-content/uploads/2025/10/Y01-Anal1.mp4';
     }
     return null;
   };
