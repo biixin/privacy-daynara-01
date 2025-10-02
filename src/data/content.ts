@@ -3,7 +3,7 @@ export const photosData = [
   {
     id: 'photo-1',
     title: '',
-    url: 'http://dl.dropboxusercontent.com/s/0ggcrti66l7pc9360bar3/yas08.png?rlkey=n5oj7zxs5w1kcei8eww766zvu&st=b7fzf9ns&dl=0',
+    url: 'https://media-wordpress.kjufc9.easypanel.host/wp-content/uploads/2025/10/yas08.png',
     views: '2.5k',
     likes: '340',
     type: 'photo'
@@ -11,7 +11,7 @@ export const photosData = [
   {
     id: 'photo-2',
     title: '',
-    url: 'http://dl.dropboxusercontent.com/s/d01qxxjxu0et2vmyls3u0/yas09.png?rlkey=hjymdtdb1vyxhh7lbs6vriol6&st=bp3fmzul&dl=0',
+    url: 'https://media-wordpress.kjufc9.easypanel.host/wp-content/uploads/2025/10/yas09.png',
     views: '1.8k',
     likes: '290',
     type: 'photo'
@@ -19,7 +19,7 @@ export const photosData = [
   {
     id: 'photo-3',
     title: '',
-    url: 'http://dl.dropboxusercontent.com/s/vcg0e4e3owtthd7w2a5yr/yas10.png?rlkey=g7nhmonn2rjadjiet3sh91xkk&st=fspwu172&dl=0',
+    url: 'https://media-wordpress.kjufc9.easypanel.host/wp-content/uploads/2025/10/yas10.png',
     views: '3.2k',
     likes: '450',
     type: 'photo'
@@ -27,7 +27,7 @@ export const photosData = [
   {
     id: 'photo-4',
     title: '',
-    url: 'http://dl.dropboxusercontent.com/s/vcg0e4e3owtthd7w2a5yr/yas10.png?rlkey=g7nhmonn2rjadjiet3sh91xkk&st=8hpvgvur&dl=0',
+    url: 'https://media-wordpress.kjufc9.easypanel.host/wp-content/uploads/2025/10/yas11.png',
     views: '1.9k',
     likes: '320',
     type: 'photo'
@@ -35,7 +35,7 @@ export const photosData = [
   {
     id: 'photo-5',
     title: '',
-    url: 'http://dl.dropboxusercontent.com/s/i5w8l823nlj153y03ep87/yas12.png?rlkey=wx86p29zxnzvwo175jakn17qu&st=v9mpop6k&dl=0',
+    url: 'https://media-wordpress.kjufc9.easypanel.host/wp-content/uploads/2025/10/yas12.png',
     views: '2.7k',
     likes: '380',
     type: 'photo'
@@ -43,7 +43,7 @@ export const photosData = [
   {
     id: 'photo-6',
     title: '',
-    url: 'http://dl.dropboxusercontent.com/s/i1b93n1u6ltow5667y0b8/yas14.png?rlkey=rgjrmdo5d9qpetmcjoumsnoek&st=1q6ojgtf&dl=0',
+    url: 'https://media-wordpress.kjufc9.easypanel.host/wp-content/uploads/2025/10/yas13.png',
     views: '2.1k',
     likes: '310',
     type: 'photo'
@@ -51,7 +51,7 @@ export const photosData = [
   {
     id: 'photo-7',
     title: '',
-    url: 'http://dl.dropboxusercontent.com/s/zl4iqxxuenigjq40k1d0p/yas15.png?rlkey=eb5smcil3mx5t62n9liahpti9&st=dtcurgj6&dl=0',
+    url: 'https://media-wordpress.kjufc9.easypanel.host/wp-content/uploads/2025/10/yas14.png',
     views: '2.1k',
     likes: '310',
     type: 'photo'
@@ -59,7 +59,7 @@ export const photosData = [
   {
     id: 'photo-8',
     title: '',
-    url: 'http://dl.dropboxusercontent.com/s/zl4iqxxuenigjq40k1d0p/yas15.png?rlkey=eb5smcil3mx5t62n9liahpti9&st=li8v0av7&dl=0',
+    url: 'https://media-wordpress.kjufc9.easypanel.host/wp-content/uploads/2025/10/yas15.png',
     views: '2.1k',
     likes: '310',
     type: 'photo'
@@ -67,7 +67,7 @@ export const photosData = [
   {
     id: 'photo-9',
     title: '',
-    url: 'http://dl.dropboxusercontent.com/s/n4gfpxsfxv0q2gb101o4f/yas16.png?rlkey=ijcxlcmwv5t289s8xoiasbiv8&st=4hj8khk6&dl=0',
+    url: 'https://media-wordpress.kjufc9.easypanel.host/wp-content/uploads/2025/10/yas16.png',
     views: '2.1k',
     likes: '310',
     type: 'photo'
@@ -75,7 +75,7 @@ export const photosData = [
   {
     id: 'photo-10',
     title: '',
-    url: 'http://dl.dropboxusercontent.com/s/spve97esohm6jbv39g31z/yas17.png?rlkey=ezm10379fxuf4i8edl5wdwr4x&st=3p3cqxtn&dl=0',
+    url: 'https://media-wordpress.kjufc9.easypanel.host/wp-content/uploads/2025/10/yas17.png',
     views: '2.1k',
     likes: '310',
     type: 'photo'
